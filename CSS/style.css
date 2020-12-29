@@ -1,0 +1,1491 @@
+/*Color :#ffffff, #fef1d7, #fdcb68, #fbaa06, #976502, #332509, #000000*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #fef1d7;
+	font-size: 100%;
+}
+
+.navbar{
+	height: 10vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 2%;
+}
+
+.navlink span, .dropdown span{
+	width: 50%;
+}
+
+.logo{
+	width: 50%;
+}
+
+.logo img{
+	height: 30%;
+	width: 30%;
+	margin: 4%;
+}
+
+.dropdown{
+	position: relative;
+}
+
+.dropdown ul{
+	position: absolute;
+	background-color: white;
+	border: 1px solid black;
+	display: none;
+	margin-top: 10px;
+	width: 200px;
+	height: 200px;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	list-style: none;
+	border-radius: 5px;
+}
+/*
+#dropdown-content{
+	display: none;
+	pointer-events: none;
+	transform: translateY(10px);
+	transition: all 0.4s ease;
+}
+
+#dropdown-btn:hover #dropdown-content{
+	display: flex;
+	cursor: pointer;
+}
+*/
+.dropdown a{
+	color: black;
+	text-decoration: none;
+}
+
+.dropdown li{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.dropdown li:hover{
+	background-color: lightgray;
+	border-bottom: 2px solid;
+	border-bottom-color: black;
+}
+
+.navbar span, .navlink a{
+	background: none;
+	border: none;
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.navbar span a :hover, .navlink a:hover, .dropdown span a:hover{
+	color: black;
+	padding-bottom: 20%;
+	border-bottom: 5px solid #976502;
+}
+
+.navlink .active, .dropdown span .active{
+	color: black;
+	padding-bottom: 20%;
+	border-bottom: 5px solid #976502;
+}
+
+#slider{
+	overflow: hidden;
+	width: 100%;
+	height: 50%;
+}
+
+#slider figure {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+#slider figure img{
+	position: absolute;
+	top: 70px;
+	left: -100%;
+	width: 100%;
+	height: 450px;
+	animation: slider 50s  infinite;
+	opacity: 0;
+}
+
+
+#slider figure img:nth-child(1){
+	animation-delay: 1s;
+}
+
+#slider figure img:nth-child(2){
+	animation-delay: 11s;
+}
+
+#slider figure img:nth-child(3){
+	animation-delay: 21s;
+}
+
+#slider figure img:nth-child(4){
+	animation-delay: 31s;
+}
+
+#slider figure img:nth-child(5){
+	animation-delay: 41s;
+}
+
+@keyframes slider{
+	0%{left: -100%; opacity: 0;}
+	5%{left: 0%; opacity: 1;}
+	20%{left: 0%; opacity: 0;}
+}
+
+#describe{
+	position: absolute;
+	top: 600px;
+	left: 0;
+}
+
+#describe h1 , #describe p{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+
+#describe h1 {
+	font-size: 300%;
+	padding-bottom: 2%;
+}
+
+#feature{
+	position: absolute;
+	top: 810px;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 2%;
+	width: 100%;
+}
+
+.tickicon{
+	width: 20%;
+	text-align: center;
+	font-size: 180%;
+}
+
+.featurecols{
+	width: 79%;
+}
+
+.featurecols h1{
+	font-size: 120%;
+}
+
+#discover{
+	position: absolute;
+	top: 940px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+hr{
+	width: 100%;
+	background-color: black;
+	height: 1px;
+	border: none;
+}
+
+#discover h2{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 300%;
+}
+
+#browse{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 2%;
+	width: 100%;
+}
+
+.genre{
+	position: relative;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+.genre img{
+	width: 100%;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: white;
+  background-color: rgba(255,255,255,0.3);
+  width: 100%;
+  padding: 6%;
+}
+
+.genre:hover img{
+	box-shadow :2px 3px 10px #fb4406;
+	border-radius: 0 10% 0 10%;
+}
+
+#comment{
+	position: absolute;
+	top: 1400px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #fbaa06;
+}
+
+#comment h2{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 300%;
+}
+
+#comwrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 2%;
+	width: 40%;
+	overflow: hidden;
+	overflow-x: auto;
+	/*scrollbar-width: none; Hide the scroll bar at Firefox*/
+}
+
+#comwrapper::-webkit-scrollbar{
+	width: 0;
+	background: transparent;/* Hide the scroll bar at Google Chrome*/
+}
+
+#comwrapper .item{
+	background-color: #fdcb68;
+	margin: 2px;
+	padding: 70px;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	left: 145%;
+}
+
+#comwrapper .item p{
+	font-size: 100%;
+	text-align: justify;
+	width: 250px;
+	padding: 40px;
+}
+
+#comarrow{
+	margin: 0;
+	padding: 0;
+	font-size: 300%;
+}
+
+#buybook{
+	position: absolute;
+	top: 1940px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#buybook h2{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 300%;
+}
+
+.buyon {
+  background-color: #f44336; /* Red */ 
+  border: none;
+  color: white;
+  padding: 1% 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100%;
+  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  cursor: pointer;
+}
+
+.buyon a{
+	text-decoration: none;
+	color: white;
+}
+
+
+footer{
+	position: absolute;
+	left: 0;
+	width: 100%;
+	color: #ffffff;
+	background-color: #976502; 
+	padding-bottom: 3%;
+}
+
+#homefooter{
+	position: absolute;
+	top: 2300px;
+}
+
+footer hr{
+	width: 20%;
+	background-color: white;
+	position: relative;
+	left: 40%;
+}
+
+#footerlink ul{
+	padding: 2%;
+	width: 100%;
+	text-align: center;
+}
+
+#footerlink li{
+	list-style: none;
+	display: inline;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 10%;
+	border-right: 1px solid white;
+
+}
+
+#footerlink li:last-child{
+	border-right: none;
+}
+
+#footerlink a{
+	color: #ffffff;
+	text-decoration: none;
+	padding-right: 2%;
+	padding-left: 2%;
+	font-size: 100%;
+}
+
+#footerlink a:hover{
+	text-decoration: underline;
+}
+
+#footerlink a{
+	list-style-type: none;
+}
+
+footer p{
+	padding-top: 2%;
+	text-align: center;
+}
+
+#founder h1{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 200%;
+	text-align: center;
+}
+
+#profilecard1{
+	margin: auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	padding: 2%;
+}
+
+#profilecard2{
+	margin: auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	padding: 2%;
+}
+
+.profilepic{
+	padding: 2%;
+}
+
+.profilepic figure img{
+	width: 70%;
+	height: 70%;
+	background-color: rgb(255,255,255, 0.5);
+}
+
+.profilepic figure img:hover{
+	outline: 10px solid #976502;
+	cursor: pointer;
+}
+
+.profilepic figure figcaption{
+	margin: auto;
+	width: 100%;
+	padding: 10%;
+}
+
+#aboutmefooter{
+	position: sticky;
+	top: 220%;
+}
+
+
+#membername{
+	width: 100%;
+	text-align: center;
+	font-size: 200%;
+	font-weight: bold;
+}
+
+#memberdetail{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top:5%; 
+}
+
+#memberdetail .detail1{
+	width: 60%;
+	padding: 2%;
+}
+
+#memberdetail .detail1 p{
+	padding-bottom: 1%;
+}
+
+#memberdetail .detail1 a{
+	color: #976502;
+}
+
+#memberdetail .detail1 table{
+	margin-top: 2%;
+}
+
+
+#memberdetail .detail1 table,
+#memberdetail .detail1 tr,
+#memberdetail .detail1 th, 
+#memberdetail .detail1 td {
+	border: 1px solid #000000;
+}
+
+#memberdetail .detail1 tr,
+#memberdetail .detail1 th, 
+#memberdetail .detail1 td {
+	text-align: center;
+	padding: 2%;
+}
+
+#memberdetail .detail1 table .col1table{
+	width: 20%;
+}
+
+#memberdetail .detail1 table .col2table{
+	width: 79%;
+}
+
+#memberdetail .detail2{
+	text-align: center;
+	margin: 2%;
+}
+
+#memberdetail .detail2 img{
+	width: 90%;
+	height: 90%;
+	background-color: rgb(255,255,255, 0.5);
+	border-style: groove;
+	border-collapse: separate;
+	padding: 20px;
+}
+
+#aboutme1footer{
+	position: sticky;
+	top: 120%;
+}
+
+#aboutme1footer p a{
+	color: #fdcb68;
+}
+
+#disclaimer{
+	width: 80%;
+	margin: auto;
+	padding: 5%;
+	background-color: #ffffff;
+	border: 3px solid red;
+}
+
+.borderpattern{
+	margin: auto;
+	width: 30%;
+	height: 40px;
+	margin-top: 2%;
+	margin-bottom: 10%;
+}
+
+.borderpattern button{
+	width: 30%;
+	height: 100%;
+	background-color: #976502;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 100%;
+}
+
+.borderpattern button:hover{
+	background-color: #704b01;
+}
+
+#disclaimer h1{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:6%;
+	font-size: 200%;
+	text-align: center;
+}
+
+#disclaimer p{
+	width: 100%;
+	text-align: center;
+}
+
+#disclaimer a{
+	color: #fbaa06;
+}
+
+#disclaimerfooter{
+	margin-top: 0;
+}
+
+#product{
+	width: 80%;
+	margin: auto;
+}
+
+#product h1{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 200%;
+	text-align: center;
+}
+
+#product hr{
+	margin: auto;
+	width: 20%;
+}
+
+#product p{
+	padding: 2%;
+	font-size: 90%;
+	text-align: center;
+}
+
+#productcard1{
+	margin: auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	padding: 2%;
+	margin-top: 5%;
+}
+
+#productcard2{
+	margin: auto;
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	padding: 2%;
+	margin-bottom: 5%;
+}
+
+.productpic{
+	padding: 2%;
+}
+
+.productpic figure img{
+	width: 70%;
+	height: 70%;
+	background-color: rgb(255,255,255, 0.5);
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.productpic figure img:hover{
+	transform: rotateY(35deg);
+	box-shadow: 20px -5px 10px rgba(0,0,0,0.35);
+	cursor: pointer;
+}
+
+.productpic figure figcaption{
+	margin: auto;
+	width: 100%;
+	padding: 10%;
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 90%;
+}
+
+#musicfooter{
+	margin-top: 8%;
+}
+
+
+#productbook h1{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 200%;
+	text-align: center;
+}
+
+#productbook hr{
+	margin: auto;
+	width: 20%;
+}
+
+#booksize{
+	width: 100%;
+	padding: 2%;
+	padding-left: 8%;
+}
+
+#booksize img{
+	width: 20%;
+	height: 20%;
+}
+
+#booksize a{
+	color: #976502;
+}
+
+#bookdetail{
+	width: 100%;
+	height: 100%;
+	background-color: #fdcb68;
+	padding: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-bottom: 0;
+}
+
+#bookdetail h2{
+	width: 100%;
+	height: 100%;
+	font-size: 200%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+#bookdetail .bookphra p{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 2%;
+	text-align: justify;
+}
+
+#productfooter{
+	position: sticky;
+	top: 170%;
+}
+
+.buyon2 {
+  background-color: #f44336; /* Red */ 
+  border: none;
+  color: white;
+  padding: 1% 2%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 150%;
+  margin: 0;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  cursor: pointer;
+}
+
+.buyon2 a{
+	text-decoration: none;
+	color: white;
+}
+
+#subject{
+	width: 80%;
+}
+
+#today{
+	text-align: center;
+	font-size: 100%;
+	margin-bottom: 2%;
+}
+
+form{
+	margin-top:2%;
+	margin-bottom: 2%;
+}
+
+fieldset{
+  border: 2px solid rgb(255,127,80);
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  font-family: Arial, Times, sans-serif;
+  margin: auto;
+  padding: 1%;
+}
+
+legend{
+	font-weight: bold;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+form p{
+	padding-bottom: 1%;
+}
+
+#formtitle{
+	text-align: center;
+	font-size: 200%;
+}
+
+#fieldsetbody{
+	border-radius: 25px;
+}
+
+.fieldsetcol{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 2%;
+	padding-left: 6%;
+	padding-right: 6%;
+	box-shadow: 3px 3px rgba(0,0,0,0.3);
+}
+
+textarea {
+  width: 90%;
+  height: 150px;
+  padding: 1% 3%;
+  box-sizing: border-box;
+  resize: none;
+  margin-top: 2%; 
+}
+
+#submit {
+	width:100px;
+    transition: .5s ease;
+	float: right;
+	box-shadow: 3px 3px rgba(0,0,0,0.3);
+}
+
+#reset{
+	width:100px;
+    transition: .5s ease;
+    float: right;
+    box-shadow: 3px 3px rgba(0,0,0,0.3);
+}
+
+#submit, #reset{
+  background-color: #976502;
+  border: none;
+  color: white;
+  padding: 2% 3%;
+  text-decoration: none;
+  margin: 2% 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#submit:hover, #reset:hover{
+	background-color: #704b01;
+	box-shadow: none;
+}
+
+input{
+	width: 50%;
+}
+
+select{
+	width: 30%;
+}
+
+input:focus , select:focus, textarea:focus{
+  outline: 3px solid #976502;
+}
+
+#print_btn{
+	position: absolute;
+	top: 30%;
+	right: 2%;
+	width: 50px;
+	height: 50px;
+	font-size: 180%;
+	background-color: #976502;
+	outline: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+
+#print_btn:hover{
+	background-color: #704b01;
+}
+
+#enquiryfooter{
+	position: sticky;
+	top: 570%;
+}
+
+#enhance h1{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 200%;
+	text-align: center;
+}
+
+.centertxt{
+	text-align: center;
+	font-weight: bold;
+	padding-top:2%;
+	padding-bottom: 2%;
+}
+
+.TFtable{
+	border-collapse:collapse; 
+	width: 80%;
+	margin: auto;
+	padding: 5%;
+}
+.TFtable td, th{ 
+	padding:7px; border:black 2px solid;
+}
+/* provide some minimal visual accomodation for IE8 and below */
+.TFtable th{
+	background: #735300;
+	color:white;
+}
+/*  Define the background color for all the ODD background rows  */
+.TFtable tr:nth-child(odd){ 
+	background: #f0d56f;
+}
+/*  Define the background color for all the EVEN background rows  */
+.TFtable tr:nth-child(even){
+	background: #f2e3ad;
+}
+.TFtable td:nth-child(1){ 
+	width: 300px;
+}
+
+#enhancefooter{
+	margin-top: 10%;
+}
+
+/* Use a media query to add a breakpoint at 1200px: */
+@media screen and (max-width: 1200px) {
+#comment{
+	position: absolute;
+	top: 1300px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #fbaa06;
+}
+
+#comwrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 2%;
+	width: 60%;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+#comwrapper .item{
+	background-color: #fdcb68;
+	margin: 2px;
+	padding: 70px;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	left: 145%;
+}
+
+#buybook{
+	position: absolute;
+	top: 1800px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#homefooter{
+	position: absolute;
+	top: 2100px;
+}
+
+.profilepic figure img{
+	width: 75%;
+	height: 75%;
+	background-color: rgb(255,255,255, 0.5);
+}
+
+.productpic figure figcaption{
+	margin: auto;
+	width: 100%;
+	padding: 10%;
+	font-size: 55%;
+}
+
+#booksize img{
+	width: 25%;
+	height: 25%;
+}
+
+.borderpattern button{
+	width: 30%;
+	height: 100%;
+	background-color: #976502;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 80%;
+}
+
+
+}
+
+
+/* Use a media query to add a breakpoint at 900px: */
+@media screen and (max-width: 900px) {
+#comment{
+	position: absolute;
+	top: 1200px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #fbaa06;
+}
+
+#comwrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 2%;
+	width: 70%;
+	overflow: hidden;
+	overflow-x: auto;
+}
+#comwrapper .item{
+	background-color: #fdcb68;
+	margin: 2px;
+	padding: 70px;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	left: 145%;
+}
+
+#buybook{
+	position: absolute;
+	top: 1700px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#homefooter{
+	position: absolute;
+	top: 2000px;
+}
+
+.profilepic figure img{
+	width: 80%;
+	height: 80%;
+	background-color: rgb(255,255,255, 0.5);
+}
+
+.profilepic figure img:hover{
+	outline: 8px solid #976502;
+}
+
+.profilepic figure figcaption{
+	margin: auto;
+	width: 100%;
+	padding: 10%;
+	font-size: 90%;
+}
+
+#memberdetail .detail1 tr,
+#memberdetail .detail1 th, 
+#memberdetail .detail1 td {
+	text-align: center;
+	padding: 2%;
+	font-size: 90%;
+}
+
+#memberdetail .detail2 img{
+	width: 90%;
+	height: 80%;
+	background-color: rgb(255,255,255, 0.5);
+	border-style: groove;
+	border-collapse: separate;
+	padding: 10px;
+}
+
+#product p{
+	padding: 2%;
+	font-size: 70%;
+	text-align: center;
+}
+
+.productpic figure figcaption{
+	margin: auto;
+	width: 100%;
+	padding: 10%;
+	font-size: 50%;
+}
+
+#booksize img{
+	width: 30%;
+	height: 30%;
+}
+
+.borderpattern{
+	margin: auto;
+	width: 35%;
+	height: 40px;
+	margin-top: 2%;
+	margin-bottom: 10%;
+}
+
+.borderpattern button{
+	width: 30%;
+	height: 100%;
+	background-color: #976502;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 70%;
+}
+
+}
+
+
+/* Use a media query to add a breakpoint at 700px: */
+@media screen and (max-width: 700px) {
+.navlink span, .dropdown span{
+	width: 65%;
+}
+
+.logo{
+	width: 35%;
+}
+
+.logo img{
+	height: 50%;
+	width: 50%;
+	margin: 4%;
+}
+
+.navbar span, .navlink a{
+	background: none;
+	border: none;
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#feature{
+	position: absolute;
+	top: 830px;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 2%;
+	width: 100%;
+}
+
+#discover{
+	position: absolute;
+	top: 1000px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#comment{
+	position: absolute;
+	top: 1250px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #fbaa06;
+}
+
+#comwrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 2%;
+	width: 70%;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+#comwrapper .item{
+	background-color: #fdcb68;
+	margin: 2px;
+	padding: 70px;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	left: 210%;
+}
+
+#buybook h2{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 250%;
+}
+
+#homefooter{
+	position: absolute;
+	top: 1900px;
+}
+
+.profilepic figure img{
+	width: 80%;
+	height: 80%;
+	background-color: rgb(255,255,255, 0.5);
+}
+
+.profilepic figure figcaption{
+	font-size: 90%;
+	margin: auto;
+	width: 70%;
+	padding: 10%;
+}
+
+.profilepic figure img:hover{
+	outline: 5px solid #976502;
+}
+
+.profilepic figure figcaption{
+	margin: auto;
+	width: 100%;
+	padding: 10%;
+	font-size: 65%;
+}
+
+#memberdetail{
+	width: 100%;
+	display: block;
+	margin-top:5%; 
+}
+
+#memberdetail .detail1{
+	width: 100%;
+	padding: 2%;
+}
+
+#memberdetail .detail1 tr,
+#memberdetail .detail1 th, 
+#memberdetail .detail1 td {
+	text-align: center;
+	padding: 2%;
+	font-size: 90%;
+}
+
+#memberdetail .detail2{
+	text-align: center;
+	margin: 2%;
+}
+
+#memberdetail .detail2 img{
+	width: 22%;
+	height: 22%;
+	background-color: rgb(255,255,255, 0.5);
+	border-style: groove;
+	border-collapse: separate;
+	padding: 10px;
+}
+
+#product p{
+	padding: 2%;
+	font-size: 65%;
+	text-align: center;
+}
+
+#booksize img{
+	width: 35%;
+	height: 35%;
+}
+
+fieldset{
+  border: 2px solid rgb(255,127,80);
+  width: 70%;
+  height: 100%;
+  text-align: left;
+  font-family: Arial, Times, sans-serif;
+  margin: auto;
+  padding: 1%;
+}
+
+#fieldsetbody{
+	border-radius: 15px;
+}
+
+.borderpattern{
+	margin: auto;
+	width: 40%;
+	height: 40px;
+	margin-top: 2%;
+	margin-bottom: 10%;
+}
+
+.borderpattern button{
+	width: 30%;
+	height: 100%;
+	background-color: #976502;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 70%;
+}
+
+}
+
+/* Use a media query to add a breakpoint at 600px: */
+@media screen and (max-width: 600px) {
+.borderpattern{
+	margin: auto;
+	width: 60%;
+	height: 40px;
+	margin-top: 2%;
+	margin-bottom: 10%;
+}
+
+.borderpattern button{
+	width: 30%;
+	height: 100%;
+	background-color: #976502;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 70%;
+}
+
+
+}
+
+/* Use a media query to add a breakpoint at 500px: */
+@media screen and (max-width: 520px) {
+#describe{
+	position: absolute;
+	top: 550px;
+	left: 0;
+}
+
+.navlink span, .dropdown span{
+	width: 75%;
+}
+
+.logo{
+	width: 25%;
+}
+
+.navbar span, .navlink a{
+	background: none;
+	border: none;
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.logo img{
+	height: 90%;
+	width: 90%;
+	margin: 4%;
+}
+
+#feature{
+	position: absolute;
+	top: 830px;
+	left: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 2%;
+	width: 100%;
+}
+
+#discover{
+	position: absolute;
+	top: 1000px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#comment{
+	position: absolute;
+	top: 1200px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: #fbaa06;
+}
+
+#comwrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	margin-bottom: 2%;
+	width: 90%;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+#comwrapper .item{
+	background-color: #fdcb68;
+	margin: 2px;
+	padding: 70px;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	left: 220%;
+}
+
+#buybook h2{
+	width: 100%;
+	padding-top:2%; 
+	padding-bottom:2%;
+	font-size: 200%;
+}
+
+#memberdetail{
+	width: 100%;
+	display: block;
+	margin-top:5%; 
+}
+
+#memberdetail .detail1{
+	width: 100%;
+	padding: 2%;
+}
+
+#memberdetail .detail1 tr,
+#memberdetail .detail1 th, 
+#memberdetail .detail1 td {
+	text-align: center;
+	padding: 2%;
+	font-size: 80%;
+}
+
+#memberdetail .detail2{
+	text-align: center;
+	margin: 2%;
+}
+
+#memberdetail .detail2 img{
+	width: 30%;
+	height: 30%;
+	background-color: rgb(255,255,255, 0.5);
+	border-style: groove;
+	border-collapse: separate;
+	padding: 10px;
+}
+
+fieldset{
+  border: 2px solid rgb(255,127,80);
+  width: 80%;
+  height: 100%;
+  text-align: left;
+  font-family: Arial, Times, sans-serif;
+  margin: auto;
+  padding: 1%;
+}
+
+#fieldsetbody{
+	border-radius: 15px;
+}
+
+
+#print_btn{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 50px;
+	font-size: 140%;
+	background-color: #976502;
+	outline: none;
+	border: none;
+	color: white;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	cursor: pointer;
+}
+
+}
+
+
+
+
+
+
+
